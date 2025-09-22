@@ -1,0 +1,376 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Add these styles to your global.css file */
+
+/* Search Form Container */
+.search-form-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  margin-bottom: 40px;
+}
+
+/* Trip Type Selector */
+.trip-type-selector {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.trip-type-btn {
+  margin-right: 12px;
+  border-radius: 20px;
+  padding: 8px 20px;
+}
+
+/* Search Form Grid */
+.search-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* Input with Icon */
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 16px;
+  width: 16px;
+  color: #6b7280;
+}
+
+.form-input {
+  padding-left: 40px;
+  height: 48px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Date Picker Trigger */
+.date-picker-trigger {
+  width: 100%;
+  height: 48px;
+  justify-content: start;
+  text-align: left;
+  font-weight: normal;
+  border-radius: 8px;
+  background: white;
+}
+
+.date-picker-trigger:hover {
+  background: white;
+}
+
+/* Calendar Popover */
+.calendar-popover {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  z-index: 50;
+}
+
+/* Passenger Select */
+.passenger-select-trigger {
+  padding-left: 40px;
+  height: 48px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.passenger-select-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  z-index: 50;
+}
+
+/* Search Button */
+.search-button {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Popover Styles */
+.popover-container {
+  position: relative;
+  width: 100%;
+}
+
+.popover-trigger {
+  cursor: pointer;
+  width: 100%;
+}
+
+.popover-content {
+  position: absolute;
+  z-index: 50;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 0;
+}
+
+.popover-position-top {
+  bottom: 100%;
+  margin-bottom: 8px;
+}
+
+.popover-position-bottom {
+  top: 100%;
+  margin-top: 8px;
+}
+
+.popover-position-left {
+  right: 100%;
+  margin-right: 8px;
+}
+
+.popover-position-right {
+  left: 100%;
+  margin-left: 8px;
+}
+
+/* Calendar Styles with Tailwind */
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #dc2626;
+  --rdp-background-color: #fef2f2;
+  margin: 0;
+}
+
+.rdp-months {
+  display: flex;
+}
+
+.rdp-month {
+  background: white;
+  margin: 0;
+  padding: 16px;
+}
+
+.rdp-table {
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+
+.rdp-cell {
+  padding: 0;
+}
+
+.rdp-head_cell {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #374151;
+  padding: 8px;
+}
+
+.rdp-day {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.rdp-day:hover:not(.rdp-day_outside) {
+  background-color: #f3f4f6;
+}
+
+.rdp-day_selected {
+  background-color: #dc2626;
+  color: white;
+}
+
+.rdp-day_selected:hover {
+  background-color: #b91c1c;
+}
+
+.rdp-day_outside {
+  color: #9ca3af;
+}
+
+.rdp-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.rdp-caption_label {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.rdp-nav {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.rdp-nav_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 6px;
+}
+
+.rdp-nav_button:hover {
+  background-color: #f3f4f6;
+}
+
+/* Flight Filters Styles */
+.flight-filters-container {
+  position: relative;
+}
+
+.flight-filters-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  margin-bottom: 20px;
+  z-index: 40;
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+  .flight-filters-card {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 70vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 50;
+  }
+  
+  .flight-filters-card.hidden {
+    display: none;
+  }
+  
+  .flight-filters-card.open {
+    display: block;
+  }
+}
+
+/* Select Styles */
+.filters-select-trigger {
+  padding: 10px;
+  height: 48px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  width: 100%;
+  background: white;
+}
+
+.filters-select-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  z-index: 50;
+}
+
+/* Checkbox Styles */
+[data-state="checked"] {
+  background-color: rgb(235, 18, 18);
+  border-color: rgb(235, 18, 18);
+}
+
+/* Slider Styles */
+.slider-track {
+  background-color: #e5e7eb;
+  height: 4px;
+}
+
+.slider-range {
+  background-color: #dc2626;
+}
+
+.slider-thumb {
+  background-color: #dc2626;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.slider-thumb:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.2);
+}
+
+/* Card Header Styles */
+.flight-filters-card .card-header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Label Styles */
+.flight-filters-card label {
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Button Styles */
+.flight-filters-card button {
+  border-radius: 6px;
+}

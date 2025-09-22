@@ -1,0 +1,147 @@
+import { User } from '@/app/types/user';
+
+export const mockUsers: User[] = [
+  {
+    id: 'user-001',
+    email: 'john.doe@example.com',
+    firstName: 'John',
+    lastName: 'Doe',
+    phoneNumber: '+1-555-0101',
+    dateOfBirth: '1985-06-15',
+    gender: 'male',
+    nationality: 'US',
+    passportNumber: 'N12345678',
+    address: {
+      street: '123 Main St',
+      city: 'New York',
+      state: 'NY',
+      country: 'United States',
+      postalCode: '10001',
+    },
+    emergencyContact: {
+      name: 'Sarah Doe',
+      relationship: 'spouse',
+      phone: '+1-555-0102',
+      email: 'sarah.doe@example.com', // Added missing email property
+    },
+    preferences: {
+      seat: 'window',
+      meal: 'vegetarian',
+      notifications: {
+        email: true,
+        sms: false,
+        push: false,
+      },
+      language: 'en',
+      currency: 'USD',
+    },
+    loyalty: {
+      program: 'Gold Tier',
+      number: 'GOLD-001',
+      points: 45000,
+      tier: 'gold',
+    },
+    role: 'user',
+    status: 'active',
+    createdAt: '2024-09-14T12:00:00Z',
+    updatedAt: '2024-09-14T12:00:00Z',
+    emailVerified: true,
+    phoneVerified: true,
+  },
+  {
+    id: 'user-002',
+    email: 'jane.smith@example.com',
+    firstName: 'Jane',
+    lastName: 'Smith',
+    phoneNumber: '+44-20-7946-0958',
+    dateOfBirth: '1990-03-22',
+    gender: 'female',
+    nationality: 'UK',
+    passportNumber: 'B98765432',
+    address: {
+      street: '456 Park Lane',
+      city: 'London',
+      state: '',
+      country: 'United Kingdom',
+      postalCode: 'W1K 7AA',
+    },
+    emergencyContact: {
+      name: 'Michael Smith',
+      relationship: 'brother',
+      phone: '+44-20-7946-0123',
+      email: 'michael.smith@example.com', // Added missing email property
+    },
+    preferences: {
+      seat: 'aisle',
+      meal: 'non-vegetarian',
+      notifications: {
+        email: true,
+        sms: false,
+        push: false,
+      },
+      language: 'en',
+      currency: 'GBP',
+    },
+    loyalty: {
+      program: 'Silver Tier',
+      number: 'SILVER-001',
+      points: 18500,
+      tier: 'silver',
+    },
+    role: 'user',
+    status: 'active',
+    createdAt: '2024-09-14T12:00:00Z',
+    updatedAt: '2024-09-14T12:00:00Z',
+    emailVerified: true,
+    phoneVerified: true,
+  },
+  {
+    id: 'user-003',
+    email: 'robert.j@example.com',
+    firstName: 'Robert',
+    lastName: 'Johnson',
+    phoneNumber: '+1-416-555-0155',
+    dateOfBirth: '1978-11-05',
+    gender: 'male',
+    nationality: 'CA',
+    passportNumber: 'CA1234567',
+    address: {
+      street: '789 Maple Ave',
+      city: 'Toronto',
+      state: 'ON',
+      country: 'Canada',
+      postalCode: 'M5V 2T6',
+    },
+    emergencyContact: {
+      name: 'Lisa Johnson',
+      relationship: 'spouse',
+      phone: '+1-416-555-0156',
+      email: 'lisa.j@example.com', // Added missing email property
+    },
+    preferences: {
+      seat: 'window',
+      meal: 'non-vegetarian',
+      notifications: {
+        email: false,
+        sms: false,
+        push: false,
+      },
+      language: 'en',
+      currency: 'CAD',
+    },
+    loyalty: {
+      program: 'Platinum Tier',
+      number: 'PLATINUM-001',
+      points: 87500,
+      tier: 'platinum',
+    },
+    role: 'admin', // Example of a different role
+    status: 'active',
+    createdAt: '2024-09-14T12:00:00Z',
+    updatedAt: '2024-09-14T12:00:00Z',
+    emailVerified: true,
+    phoneVerified: true,
+  },
+];
+
+export const mockPassengers = []; // Removed old data and exported an empty array
